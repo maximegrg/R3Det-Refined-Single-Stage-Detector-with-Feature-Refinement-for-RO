@@ -77,6 +77,7 @@ def detect(det_net, inference_save_path, real_test_imgname_list):
                 draw_img = (draw_img * np.array(cfgs.PIXEL_STD) + np.array(cfgs.PIXEL_MEAN_)) * 255
             else:
                 draw_img = draw_img + np.array(cfgs.PIXEL_MEAN)
+            print(detected_categories)
             final_detections = draw_box_in_img.draw_boxes_with_label_and_scores(draw_img,
                                                                                 boxes=show_boxes,
                                                                                 labels=show_categories,
