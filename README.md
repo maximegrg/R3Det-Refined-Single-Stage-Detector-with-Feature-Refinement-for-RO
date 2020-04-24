@@ -52,12 +52,15 @@ More results and trained models are available in the [MODEL_ZOO.md](MODEL_ZOO.md
 * [Google Drive](https://drive.google.com/drive/folders/1BM8ffn1WnsRRb5RcuAcyJAHX8NS2M1Gz?usp=sharing)      
 
 ## Compile
-```  
-cd $PATH_ROOT/libs/box_utils/cython_utils
-python setup.py build_ext --inplace (or make)
+```
 
-cd $PATH_ROOT/libs/box_utils/
-python setup.py build_ext --inplace
+!pip install tensorflow==1.13.2 #If Tensorflow.contrib not available
+
+cd /content/drive/My Drive/R3det/R3Det-Refined-Single-Stage-Detector-with-Feature-Refinement-for-RO-master/libs/box_utils/cython_utils
+!python3 setup.py build_ext --inplace
+
+cd /content/drive/My Drive/R3det/R3Det-Refined-Single-Stage-Detector-with-Feature-Refinement-for-RO-master/libs/box_utils
+!python3 setup.py build_ext --inplace
 ```
 
 ## Train
@@ -94,9 +97,8 @@ python multi_gpu_train_r3det.py
 
 ## Eval
 ```  
-cd $PATH_ROOT/tools
-python test_dota_r3det.py --test_dir='/PATH/TO/IMAGES/'  
-                          --gpus=0,1,2,3,4,5,6,7          
+cd /content/drive/My Drive/R3det/R3Det-Refined-Single-Stage-Detector-with-Feature-Refinement-for-RO-master/tools
+!python3 test_dota_r3det.py --test_dir='/content/drive/My Drive/R3det/R3Det-Refined-Single-Stage-Detector-with-Feature-Refinement-for-RO-master/Images'  --gpus=0,1,2,3,4,5,6,7          
 ``` 
 
 ## Tensorboard
